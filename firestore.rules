@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Products Collection: প্রডাক্ট ও ছবি লিঙ্ক লোড ও সেভ করার জন্য
+    match /products/{productId} {
+      allow read, write: if true;
+    }
+
+    // 2. Orders Collection: কাস্টমারদের অর্ডার সেভ ও এডমিন প্যানেলে শো হওয়ার জন্য
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // 3. Settings Collection: ওয়েবসাইটের ব্যানার ও সেটিংস সেভ করার জন্য
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+
+    // 4. অন্যান্য কোনো অবান্তর কালেকশন থাকলে ব্লক থাকবে
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

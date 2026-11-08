@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #e11d48;
+  --theme-primary-hover: #be123c;
+  --theme-primary-contrast: #ffffff;
+  --theme-secondary: #f43f5e;
+  --theme-soft-bg: #fff5f7;
+  --theme-surface-bg: #ffffff;
+  --theme-border-soft: rgba(244, 63, 94, 0.18);
+  --theme-border-focus: #e11d48;
+  --theme-badge-bg: #ffe4e6;
+  --theme-badge-text: #be123c;
+  --theme-badge-border: #fecdd3;
+  --theme-hero-glow: rgba(244, 63, 94, 0.15);
+  --theme-price-highlight: #e11d48;
+  --theme-savings-bg: #e11d48;
+  --theme-savings-text: #ffffff;
+  --theme-cta-bg: #e11d48;
+  --theme-cta-hover-bg: #be123c;
+  --theme-cta-text: #ffffff;
+  --theme-cta-shadow: 0 10px 25px -5px rgba(225, 29, 72, 0.35);
+  --theme-rgb: 225, 29, 72;
+}
+
+/* Smooth transitions for theme elements */
+.theme-transition {
+  transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

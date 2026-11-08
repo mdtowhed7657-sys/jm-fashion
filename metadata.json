@@ -1,0 +1,6 @@
+{
+  "name": "JM Fashion - Single Product Multi-Color Store",
+  "description": "A luxury single-product fashion store by JM Fashion featuring 10-15 color variants, 2-column mobile photo gallery, fast order system, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
